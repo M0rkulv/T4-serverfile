@@ -1,0 +1,65 @@
+"installscript"
+{
+	"registry"
+	{
+		"HKEY_LOCAL_MACHINE\\SOFTWARE\\Activision\\Call of Duty WAW"
+		{
+			"string"
+			{
+				"Digital Distribution"		"Steam"
+				"EXEStringM"		"%INSTALLDIR%\\CoDWaWmp.exe"
+				"EXEStringS"		"%INSTALLDIR%\\CoDWaW.exe"
+				"InstallDrive"		"%INSTALLDIR%"
+				"InstallPath"		"%INSTALLDIR%"
+				"PatchLog"		"%INSTALLDIR%\\install.log"
+				"Techhelp"		"%INSTALLDIR%\\Docs\\Help\\readme.htm"
+				"Version"		"1.3 "
+				"english"
+				{
+					"Language"		"enu"
+					"QA"		"22.0 "
+				}
+				"french"
+				{
+					"Language"		"fra"
+					"QA"		"6.0 "
+				}
+				"german"
+				{
+					"Language"		"deu"
+					"QA"		"8.0 "
+				}
+				"spanish"
+				{
+					"Language"		"esp"
+					"QA"		"5.0 "
+				}
+				"italian"
+				{
+					"Language"		"ita"
+					"QA"		"4.0 "
+				}
+			}
+		}
+	}
+	"Run Process"
+	{
+		"DirectX"
+		{
+			"process 1"		"%INSTALLDIR%\\DirectX\\DXSETUP.exe"
+			"NoCleanUp"		"1"
+			"IgnoreExitCode"		"1"
+		}
+		"Punkbuster"
+		{
+			"process 1"		"%INSTALLDIR%\\installers\\pbsvc.exe"
+			"command 1"		"/i"
+			"IgnoreExitCode"		"1"
+			"NoCleanUp"		"1"
+		}
+	}
+}
+"kvsignatures"
+{
+	"installscript"		"a7c91c5a72c30aec012ffa751bf9ac5cfc7b47c504ada8cf314228d409451b80ba7def0b83df2ac92c9537661f7ba29c4e40f524e8bb73420f3fbafcc9f7cacb3583dcce685cd79a94a0a795d74f4ac52bc4f80488d0ac622d890e3431fe94c1ca78778ff8f8c5f9018644ecaa5e645197bb2a49d85315c7310512a77d381f46"
+}
